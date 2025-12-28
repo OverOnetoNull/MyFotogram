@@ -18,7 +18,23 @@ function closeDialog() {
 
 
 
-let fruits = [1, 2, 3, 4, 5];
+
+
+let fruits = [
+  "ai-generated-8756365_1280",
+  "boat-4868355_640",
+  "boat-7497807_640",
+  "boat-7497809_640",
+  "coast-6917777_640",
+  "dominicana-4620393_640",
+  "sea-4994010_640",
+  "sun-4475490_640",
+  "sun-5039871_640",
+  // "sun-5223711_1280",
+  "sunset-5429861_640",
+  "water-4873775_1280"
+];
+
 
 function containsElement(array, element) {
     return array.includes(element);
@@ -33,14 +49,25 @@ function initArrays(){
     for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
    
    
-        contentRef.innerHTML += `<p>+ ${fruits[indexFruits]}</p>`;
+        contentRef.innerHTML += `<img src>+./img/pictures/ + ${fruits[indexFruits]} + .jpg/  ></img>`;
+        
+
+    
     
       }
     
    }
+   
     
 
 
+    
+
+
+ 
+
+   
+// DialogImgID
 
 // Liste
 
