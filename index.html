@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+     <link rel="stylesheet" href="style.css"></link>
+     
+
 </head>
 <body>
+    <main>
+        <button onclick="openDialog()"> Dialog öffnen</button>
+
+
+        <dialog id="myDialog">
+            
+            <section>
+                <h2>Dies ist ein Dialog</h2>
+                <p>Hier steht der Inhalt des Dialogs.</p>
+            
+            </section>
+
+            <footer>
+               <button onclick="closeDialog()">Dialog schließen</button>
+            </footer>
+
+        </dialog>
+
+
+
+
+
+    </main>
+
+<!-- 
         <main id="ID_Main">mmmmmmmmm</main>
 
-        <display id="ID_Display">dddddddddd</display>
+
+        <dialog id="openDialog">Dialog öffnen</dialog> -->
+
+
+
+        <!-- <dialog id="ID_Display">dddddddddd</dialog> -->
 
 
 
 </body>
 
- <script src="script.js"></script>
+<script src="script.js"></script>
+
 </html>
