@@ -19,8 +19,7 @@ function closeDialog() {
 
 
 
-
-let fruits = [
+const fruits = [
   "ai-generated-8756365_1280",
   "boat-4868355_640",
   "boat-7497807_640",
@@ -36,10 +35,15 @@ let fruits = [
 ];
 
 
+
+
 function containsElement(array, element) {
     return array.includes(element);
 
 }
+
+
+
 
 
 function initArrays(){
@@ -49,10 +53,11 @@ function initArrays(){
     for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
    
    
-        contentRef.innerHTML += `<img src>+./img/pictures/ + ${fruits[indexFruits]} + .jpg/  ></img>`;
+        contentRef.innerHTML += `<img src="./img/pictures/${fruits[indexFruits]}.jpg"></img>`;
+        
         
 
-    
+        
     
       }
     
