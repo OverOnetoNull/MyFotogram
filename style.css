@@ -1,3 +1,8 @@
+/* Dialog open close
+
+ */
+
+
 .dialog{
     
     
@@ -28,4 +33,40 @@ dialog.opened {
     opacity: 1;
     background-color: rgba(25, 139, 170, 0.5);
     transition: all 5s ease-in;
+}
+
+
+
+/* 
+
+Dialog open close     */
+
+
+/* Header Footer     
+
+*/
+
+.Header{   
+
+    display: flex;
+
+
+    height: 200px;
+    background-color: aqua;
+    
+}
+
+.Footer{
+
+    height: 200px;
+}
+
+
+
+
+
+.my_content{
+        height: 100px;
+        width: 100px;
+
 }
