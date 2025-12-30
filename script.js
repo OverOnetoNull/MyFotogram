@@ -38,7 +38,7 @@ let fruits = [
   "sea-4994010_640",
   "sun-4475490_640",
   "sun-5039871_640",
-  // "sun-5223711_1280",
+ 
   "sunset-5429861_640",
   "water-4873775_1280"
 ];
@@ -119,6 +119,9 @@ function prevImage() {
 }
 
 function updateDialogImage() {
+
+
+  
   const dialogImg = document.getElementById("DialogImgID");
   dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
   dialogImg.alt = fruits[currentIndex];
