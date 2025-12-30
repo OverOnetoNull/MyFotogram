@@ -7,16 +7,22 @@ const dialogRef = document.getElementById("myDialog");
 
 // Öffnet den Dialog
 function openDialog() {
+  dialogRef.showModal();
+  dialogRef.classList.add("opened");
+}
   
-    updateDialogImage();   
-    dialogRef.showModal();
-    dialogRef.classList.add("opened");
-}   
 
 // Schließt den Dialog
 function closeDialog() {
     dialogRef.close();
     dialogRef.classList.remove("opened");
+}
+
+
+function openImage(index) {
+  currentIndex = index;   //  Das ausgewählte Bild
+  updateDialogImage();    //  Bild setzen
+  openDialog();       //  Dialog öffnen
 }
 
 
@@ -46,24 +52,24 @@ function containsElement(array, element) {
 }
 
 
-function initArrays(){
-    let contentRef = document.getElementById('my_content');
-    contentRef.innerHTML = "";
+function initArrays() {
+  let contentRef = document.getElementById('my_content');
 
-    for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
-   
-           contentRef.innerHTML += `<img class="my_content" src="./img/pictures/${fruits[indexFruits]}.jpg"></img>
-           
-           
-           `;
+  contentRef.innerHTML = "";
 
 
-       
-        
-    
-      }
-    
-   }
+  for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
+    contentRef.innerHTML += `
+      <img
+        class="my_content"
+        src="./img/pictures/${fruits[indexFruits]}.jpg"
+        onclick="openImage(${indexFruits})"
+      >
+    `;
+  }
+}
+
+
 
 
 
