@@ -4,8 +4,11 @@ const dialogRef = document.getElementById("myDialog");
  
 
 
+
 // Öffnet den Dialog
 function openDialog() {
+  
+    updateDialogImage();   
     dialogRef.showModal();
     dialogRef.classList.add("opened");
 }   
@@ -35,7 +38,7 @@ let fruits = [
 ];
 
 
-
+// Includes the Array List  in the Element  s
 
 function containsElement(array, element) {
     return array.includes(element);
@@ -49,41 +52,72 @@ function initArrays(){
 
     for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
    
-           contentRef.innerHTML += `<img class="my_content" src="./img/pictures/${fruits[indexFruits]}.jpg"></img>`;
+           contentRef.innerHTML += `<img class="my_content" src="./img/pictures/${fruits[indexFruits]}.jpg"></img>
+           
+           
+           `;
+
+
        
         
     
       }
     
    }
+
+
+
    
     
 
 
-    
+    // Globaler Index
 
+
+let currentIndex = 0;
+
+  //Dialog öffnen mit Array-Index
+
+function showImageFromArray(index) {
+  currentIndex = index;
+    
+  const dialogImg = document.getElementById("DialogImgID");
+  dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
+  dialogImg.alt = fruits[currentIndex];
+  
+}
+
+
+
+function nextImage() {
+
+     currentIndex++;
+
+  if (currentIndex >= fruits.length) {
+     currentIndex = 0;
+  }
+
+  updateDialogImage();
+}
+
+
+
+function prevImage() {
+  currentIndex--;
+
+  if (currentIndex < 0) {
+      currentIndex = fruits.length - 1;
+  }
+
+  updateDialogImage();
+}
+
+function updateDialogImage() {
+  const dialogImg = document.getElementById("DialogImgID");
+  dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
+  dialogImg.alt = fruits[currentIndex];
+}
 
  
 
    
-// DialogImgID
-
-// Liste
-
-
-// let Liste = [1, 2, 3, 4, 5];
-
-
-// let displayElement = document.getElementById("main_Repeater");
-
-
-// let getElementById = Liste.getElementById("main_Repeater");
-
-// {
-//     displayElement.innerHTML = "<img src='./img/pictures/eins.jpg'></img>";
-// }
-
-
-
-// let mainElement = document.getElementById("ID_Main");
-// let displayElement = document.getElementById("ID_Display");
