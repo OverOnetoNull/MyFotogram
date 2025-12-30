@@ -62,8 +62,8 @@ function initArrays() {
     contentRef.innerHTML += `
       <img
         class="my_content"
-        src="./img/pictures/${fruits[indexFruits]}.jpg"
-        onclick="openImage(${indexFruits})"
+         src="./img/pictures/${fruits[indexFruits]}.jpg"
+           onclick="openImage(${indexFruits})"
       >
     `;
   }

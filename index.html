@@ -39,27 +39,44 @@
 
         <dialog id="myDialog">
             
-            <section>
-                <h2>Dies ist ein Dialog</h2>
-                <p>Hier steht der Inhalt des Dialogs.</p>
+            <section id="mySection">
+
+              
 
 
-                <button onclick="prevImage()">−</button>
+              <div>
+                        <h2>Dies ist ein Dialog</h2>
+                        <p>Hier steht der Inhalt des Dialogs.</p>
 
-                <img id="DialogImgID" class="DialogImgClass" alt="">
-
+            </div>
 
                 
-                <button onclick="nextImage()">+</button>
-            
-            
-            </section>
+            <div>
 
-            <footer>
-               <button onclick="closeDialog()">Dialog schließen</button>
-            </footer>
+                 <button onclick="closeDialog()">Dialog schließen</button>
 
-        </dialog>
+
+
+            <div class="conoleAndMain">
+
+                <button class="myLeftButton" onclick="prevImage()">−</button>
+
+                <img id="DialogImgID" class="DialogImgClass" alt="">
+                
+                <button class="myRightButton" onclick="nextImage()">+</button>
+
+
+            </div>
+
+
+
+</div>     
+     </dialog>
+
+     </section>
+
+
+   
     </main>
 </body>
 
