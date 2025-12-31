@@ -71,9 +71,9 @@ Dialog open close     */
 .MyMain{
 
     min-height: 100vh;
-    
     display:flex;           
     flex-direction: column;
+    justify-content: space-between;
 
  }
 
@@ -113,10 +113,7 @@ Dialog open close     */
 
 
     display:flex;           
-
     flex-direction: column;
-
-    flex-wrap: 200px 200px;
     margin: 20px;
    
 
