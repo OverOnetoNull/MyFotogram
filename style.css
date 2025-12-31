@@ -2,6 +2,12 @@
     position: absolute;
     flex-direction: column; 
     display: flex;
+
+
+
+    justify-content: center;
+    align-items: center;
+
     
 }
 
@@ -13,7 +19,7 @@
 
 .dialog{
     
-    
+    /* margin 100px; */
     border: 5px solid rgb(243, 6, 6);
     transform: translateX(50px);
     transition: all 2s ease-in;
@@ -31,7 +37,7 @@ dialog.opened {
 .myCloseButtonDiv{
 
 display: flex;
-flex-direction: column-reverse;
+
 
 }
 
@@ -60,6 +66,17 @@ Dialog open close     */
 /* Header Footer     
 
 */
+
+
+.MyMain{
+
+    min-height: 100vh;
+    
+    display:flex;           
+    flex-direction: column;
+
+ }
+
 
 .Header{   
 
@@ -115,8 +132,9 @@ Dialog open close     */
         
         display: flex;
         flex-direction: row;
+        align-self: center;
 
-        width: 100px;
+        margin: 0;
         
     
     }
