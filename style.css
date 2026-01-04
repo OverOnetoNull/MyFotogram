@@ -5,7 +5,7 @@
     height: 100vh;
     flex-direction: column; 
     display: flex;
-    /* justify-content: center; */
+    
     flex-direction: column;
 
     
@@ -15,12 +15,16 @@
 
 .MyMain{
 
-    
-
     flex: 1;
     display:flex;  
     flex-direction: column;
-    /* justify-content: space-between; */
+    align-items: center;
+ }
+
+
+ .website_title h1{
+    size: 10px;
+
  }
 
 
@@ -111,9 +115,8 @@ Dialog open close     */
 
 
 .my_content{
-        height: 100px;
-        width: 100px;
-
+        height: 50px;
+        width: 50px;
         margin: 5px;
 
 }
@@ -124,8 +127,6 @@ Dialog open close     */
     display:flex;           
     flex-direction: column;
  
-   
-
 
     }
 
@@ -137,7 +138,6 @@ Dialog open close     */
         display: flex;
         flex-direction: row;
         align-self: center;
-
         margin: 0;
         
     
@@ -192,6 +192,76 @@ Dialog open close     */
         background-color: aqua;
 
     }
+
+
+
+      /* Media Querris */
+
+
+
+@media (max-width: 1024px) {
+
+  #website_title{
+    size: 20px;
+  }
+
+  .DialogImgClass{
+    width: 350px;
+    height: 350px;
+  }
+}
+
+      
+
+
+
+      @media (max-width: 768px) {
+
+  .Header,
+  .Footer{
+    height: 50px;
+  }
+
+  .MyMain{
+    padding: 10px;
+  }
+
+  .DialogImgClass{
+    width: 300px;
+    height: 300px;
+    min-width: 300px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+
+  .Header,
+  .Footer{
+    height: 45px;
+    font-size: 14px;
+  }
+
+  #website_title{
+    size:16px;
+    text-align: center;
+  }
+
+  .DialogImgClass{
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+  }
+
+  .myLeftButton,
+  .myRightButton{
+    width: 30px;
+  }
+}
+
+
+
 
 
 
