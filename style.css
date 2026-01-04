@@ -1,6 +1,8 @@
 .body{
 
     margin: 0;
+
+    height: 100vh;
     flex-direction: column; 
     /* display: flex; */
     /* justify-content: center; */
@@ -8,6 +10,17 @@
 
     
 }
+
+
+
+.MyMain{
+
+    height: calc(100vh - 96px);
+    display:flex;           
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
 
 
 /* 
@@ -65,15 +78,6 @@ Dialog open close     */
 
 */
 
-
-.MyMain{
-
-    min-height: 100vh;
-    display:flex;           
-    flex-direction: column;
-    justify-content: space-between;
-
- }
 
 
 .Header{   
