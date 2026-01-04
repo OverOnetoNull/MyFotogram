@@ -18,7 +18,7 @@
     height: calc(100vh - 96px);
     display:flex;           
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
  }
 
 
@@ -55,7 +55,7 @@ flex-direction: row-reverse;
 
 .dialog::backdrop {
     opacity: 0;
-    background-color: rgba(222, 74, 5, 0.5);
+    background-color: rgba(0, 0, 0, 1);
     transition: all 5s ease-in;
 }
 
@@ -72,6 +72,9 @@ flex-direction: row-reverse;
 /* 
 
 Dialog open close     */
+
+
+
 
 
 /* Header Footer     
@@ -125,7 +128,7 @@ Dialog open close     */
 
 
 
-     .conoleAndMain{
+     .consoleAndMain{
         
         display: flex;
         flex-direction: row;
