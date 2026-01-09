@@ -124,9 +124,15 @@ Dialog open close     */
 
 
 .my_content{
-        height: 80px;
-        width: 80px;
+        height: 180px;
+        width: 180px;
         margin: 5px;
+
+        }
+
+.my_divcontent{
+
+  display: flex;
 
 }
 
@@ -136,8 +142,7 @@ Dialog open close     */
     display:flex;           
     flex-direction: column;
  
-
-    }
+  }
 
 
 
@@ -208,17 +213,7 @@ Dialog open close     */
 
 
 
-@media (max-width: 1024px) {
 
-  #website_title{
-    size: 20px;
-  }
-
-  .DialogImgClass{
-    width: 350px;
-    height: 350px;
-  }
-}
 
       
 
@@ -240,19 +235,18 @@ Dialog open close     */
     height: 300px;
     min-width: 300px;
   }
-}
 
 
 .my_content{
-        height: 50px;
-        width: 50px;
+        height: 120px;
+        width: 120px;
         margin: 5px;
 
 }
+}
 
 
-
-@media (max-width: 480px) {
+@media (max-min: 480px) {
 
   .Header,
   .Footer{
@@ -275,9 +269,6 @@ Dialog open close     */
   .myRightButton{
     width: 30px;
   }
-
-
-
 
   
 .my_content{
