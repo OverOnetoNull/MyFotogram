@@ -1,7 +1,7 @@
 .h1{ 
 
   color: rgb(218, 25, 25);
-
+  font-size: 32px;
   border-bottom: solid 5px;
   border-color: black;
 }
@@ -116,7 +116,7 @@ Dialog open close     */
 
     color: red;
     height: 55px;
-   background-color: rgb(3, 14, 77);
+    background-color: rgb(3, 14, 77);
     flex-shrink: 0;
 }
 
@@ -125,9 +125,10 @@ Dialog open close     */
 
 
 .my_content{
-        height: 180px;
+        height: 300px;
         width: 180px;
         margin: 5px;
+        display: flex;
 
         }
 
@@ -212,7 +213,7 @@ Dialog open close     */
 
       /* Media Querris */
 
-
+      
 
 
 
@@ -229,6 +230,7 @@ Dialog open close     */
 
   .MyMain{
     padding: 10px;
+    justify-content: flex-start
   }
 
   .DialogImgClass{
@@ -247,7 +249,7 @@ Dialog open close     */
 }
 
 
-@media (max-min: 480px) {
+@media (max-width: 480px) {
 
   .Header,
   .Footer{
@@ -255,10 +257,7 @@ Dialog open close     */
     font-size: 14px;
   }
 
-  #website_title{
-    size:16px;
-    text-align: center;
-  }
+.h1{ font-size: 16px}
 
   .DialogImgClass{
     width: 250px;
