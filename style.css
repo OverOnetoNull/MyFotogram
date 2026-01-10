@@ -20,6 +20,18 @@
 
 
 
+
+.MyMain {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(37, 170, 236);
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+
+/* 
 .MyMain{
 
     flex: 1;
@@ -28,13 +40,13 @@
     justify-content: space-around;
     align-items: center;
     background-color: rgb(37, 170, 236);
- }
+ } */
 
-
+/* 
  .website_title h1{
     size: 10px;
 
- }
+ } */
 
 
 
@@ -125,10 +137,11 @@ Dialog open close     */
 
 
 .my_content{
-        height: 300px;
-        width: 180px;
-        margin: 5px;
         display: flex;
+        height: 300px;
+        width: 300px;
+        margin: 5px;
+        flex-shrink: 0;
 
         }
 
@@ -136,6 +149,13 @@ Dialog open close     */
 
   display: flex;
 
+}
+
+.consoleAndMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .mySection{
@@ -272,8 +292,8 @@ Dialog open close     */
 
   
 .my_content{
-        height: 40px;
-        width: 40px;
+        height: 100px;
+        width: 100px;
         margin: 5px;
 
 }
