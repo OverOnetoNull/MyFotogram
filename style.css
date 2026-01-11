@@ -14,21 +14,14 @@
     flex-direction: column; 
     display: flex;    
     
-
-    
 }
-
-
-
-
-
 
 .MyMain {
     
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    background-color: rgb(37, 170, 236);
+    background-color: rgb(0, 68, 185);
     align-items: center;
     flex-direction: column;
     align-self: center;
@@ -43,7 +36,22 @@
   height: auto;
   margin: 5px;
   align-content: flex-start;
+  justify-content: center;
 }
+
+.gallery:hover {
+
+  border: 1110px;
+  border-color: rgb(255, 4, 0);
+
+}
+
+
+
+
+
+
+
 
 .gallery-img{
   width: 210px;
@@ -56,16 +64,18 @@
 
 
 
+
+
+
  .my_divcontent{
 
 
   width: 100%;
   height: auto;       
   display: flex;
-
+  margin-left: 55px;
+  margin-right: 55px;
 }
-
-
 
 
 
