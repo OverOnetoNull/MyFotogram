@@ -1,9 +1,5 @@
-
-
 const dialogRef = document.getElementById("myDialog");
  
-
-
 
 // Öffnet den Dialog
 function openDialog() {
@@ -80,13 +76,12 @@ function initArrays() {
     // Globaler Index
 
 
-let currentIndex = 0;
+    let currentIndex = 0;
 
-  //Dialog öffnen mit Array-Index
+  //open Dialog  with  Array-Index
 
 function showImageFromArray(index) {
-  currentIndex = index;
-    
+  currentIndex = index; 
   const dialogImg = document.getElementById("DialogImgID");
   dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
   dialogImg.alt = fruits[currentIndex];
