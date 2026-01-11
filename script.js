@@ -61,7 +61,7 @@ function initArrays() {
   for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
     contentRef.innerHTML += `
       <img
-        class="my_content"
+        class="gallery-img"
          src="./img/pictures/${fruits[indexFruits]}.jpg"
            onclick="openImage(${indexFruits})"
       >
