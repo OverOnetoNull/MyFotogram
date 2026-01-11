@@ -214,12 +214,10 @@ Dialog open close     */
      display:flex;
 
 
-    width: 400px;
-    height: 400px;
-
+    width: 700px;
+    height: 600px;
     min-width:400px ;
-    /* max-height: 55px; */
-
+   
      align-items: center;
      object-fit: contain;
      background-color: transparent;
@@ -236,23 +234,26 @@ Dialog open close     */
 
     .myLeftButton{     
     
-      
+      color: red;
         display: flex;
         width: 20px;
         align-items: center;
         background-color: transparent;
+        justify-content: center;
+
 
 }
 
     .myRightButton{
         
         
+        color: red;
         display: flex;
-        align-items: center;
-        
         width: 20px;
-       
+        align-items: center;
         background-color: transparent;
+        justify-content: center;
+
 
     }
 
@@ -268,7 +269,7 @@ Dialog open close     */
 
 
 
-      @media (max-width: 768px) {
+      @media (max-width: 858px) {
 
   .Header,
   .Footer{
