@@ -20,7 +20,7 @@
   border: 16px;
   border-color: rgb(220, 175, 175);
 }
-.p{
+p{
   color: red;
   width: 33px;
   height: 20px;
@@ -111,7 +111,8 @@
     border: 5px solid rgb(243, 6, 6);
     transform: translateX(50px);
     transition: all 2s ease-in;
-    
+   
+
 
 }
 
@@ -188,8 +189,9 @@ Dialog open close     */
 
 .Fotogram_Logo{
 
-  
-  height: 50px;
+  margin-top: 3px;
+  margin-left: 5px;
+  height: 48px;
 
 
 }
