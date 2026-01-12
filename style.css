@@ -236,14 +236,19 @@ Dialog open close     */
 
 }
 
+soleAndMain{
+   
+   display: flex;
+   flex-direction: row;
+   align-self: center;
+   margin: 0;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 10px;
+    
+    }
 
 
-.consoleAndMain {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
 
 .mySection{
 
@@ -256,15 +261,6 @@ Dialog open close     */
 
 
 
-     .consoleAndMain{
-        
-        display: flex;
-        flex-direction: row;
-        align-self: center;
-        margin: 0;
-        
-    
-    }
 
 
     
