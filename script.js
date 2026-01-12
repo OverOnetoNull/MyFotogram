@@ -4,20 +4,13 @@
 // Bubbling
 
 
-// function logUp(event){
-
-//     console.log("logUp")
-//      
-//     }
 
 
 
-function NoPropagation(event){
+function noPropagation(event) {
+  event.stopPropagation();
 
-      event.stopPropagation()
-      console.log("NoPropagation");
-
-      
+  console.log(stop)
 }
 
 

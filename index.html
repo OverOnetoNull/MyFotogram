@@ -15,7 +15,7 @@
 
 
 
-<body class="body" onload="initArrays()" onclick="logDownBubblingProtection(event)">
+<body class="body" onload="initArrays()">
 
      
             <header class="Header" id="Header">
@@ -69,7 +69,7 @@
               
 
                 
-            <div onclick=" NoPropagation(event)" class="myCloseButtonDiv">
+            <div  onclick="noPropagation(event)" class="myCloseButtonDiv">
 
                  <div onclick="closeDialog()">
                     
@@ -80,22 +80,22 @@
             </div>
             
 
-            <div onclick=" NoPropagation(event)" class="consoleAndMain">
+            <div onclick="noPropagation" class="consoleAndMain">
                 
 
-                <div class="myLeftButton" onclick="prevImage(), logDownBubblingProtection(event)">
+                <div class="myLeftButton" onclick="noPropagation(event)">
                     
                    
-                    <p>&lArr;</p>
+                    <p onclick= "prevImage()">&lArr;</p>
 
 
                 </div>
 
-                <img id="DialogImgID" class="DialogImgClass" alt="">
+                <img onclick=" noPropagation(event)"  id="DialogImgID" class="DialogImgClass" alt="">
                 
-                <div class="myRightButton"  onclick= "nextImage(), logDownBubblingProtection(event)">
+                <div class="myRightButton"  onclick= "noPropagation(event)">
                     
-                      <p>&rArr;</p>
+                      <p onclick= "nextImage()">&rArr;</p>
                     
                     </div>
 
