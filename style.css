@@ -6,7 +6,11 @@
       --HeaderFooterBG: rgb(3, 14, 77);
       --HFerHeigh: 55px;
       --colorArrows: red;
+      --colorArrBordercolor: rgba(82, 0, 106, 0.39);
+      --colorArrBackgroundcolor: rgb(149, 75, 223);
+
      
+
 
  /* var(--HeaderFooterBG) */
 }
@@ -31,12 +35,13 @@
   border-color: rgb(220, 175, 175);
 }
 p{
-  color: red;
+  color: rgb(4, 18, 140);
   width: 33px;
   height: 20px;
   border: solid 10px;
-  border-color: rgba(82, 0, 106, 0.39);
-  background-color: rgb(149, 75, 223);
+  
+  border-color: var(--colorArrBordercolor);
+  background-color: var(--colorArrBackgroundcolor);
   
 
 
@@ -73,6 +78,8 @@ p{
     background-color: var(--HeaderFooterBG) 
 }
 
+/* All  in Main */
+
 
 .MyMain {
     
@@ -87,6 +94,19 @@ p{
 
 
 }
+
+
+
+ .my_divcontent{
+
+  width: 100%;
+  height: auto;       
+  display: flex;
+  margin-left: 55px;
+  margin-right: 55px;
+  
+}
+
 
 
 .gallery{
@@ -127,19 +147,8 @@ p{
 
 
 
- 
 
 
- .my_divcontent{
-
-
-  width: 100%;
-  height: auto;       
-  display: flex;
-  margin-left: 55px;
-  margin-right: 55px;
-  
-}
 
 /* 
     Dialog open close
