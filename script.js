@@ -1,5 +1,27 @@
-const dialogRef = document.getElementById("myDialog");
- 
+
+
+
+// Bubbling
+
+
+// function logUp(event){
+
+//     console.log("logUp")
+//      
+//     }
+
+
+
+function NoPropagation(event){
+
+      event.stopPropagation()
+      console.log("NoPropagation");
+
+      
+}
+
+
+
 
 // Öffnet den Dialog
 function openDialog() {
@@ -40,7 +62,14 @@ let fruits = [
 ];
 
 
-// Includes the Array List  in the Element  s
+
+const dialogRef = document.getElementById("myDialog");
+ 
+
+
+
+
+// Includes the Array List  in the Elements
 
 function containsElement(array, element) {
     return array.includes(element);
@@ -64,13 +93,6 @@ function initArrays() {
     `;
   }
 }
-
-
-
-
-
-   
-    
 
 
     // Globaler Index

@@ -84,6 +84,12 @@ p{
 
 
 
+
+
+
+ 
+
+
  .my_divcontent{
 
 
@@ -105,18 +111,20 @@ p{
 
 
 
-.dialog{
+.myDialog{
     
     /* margin 100px; */
     border: 5px solid rgb(243, 6, 6);
     transform: translateX(50px);
     transition: all 2s ease-in;
-   
-
-
+  
 }
 
-dialog.opened {
+
+
+
+
+.myDialog.opened {
     border: 5px solid rgb(232, 51, 10);
     transition: all 2s ease-in;
     background-color: transparent;
@@ -136,19 +144,22 @@ flex-direction: row-reverse;
 }
 
 
-.dialog::backdrop {
+.myDialog::backdrop {
     opacity: 0;
-    background-color: rgb(216, 23, 23);
-    transition: all 5s ease-in;
+    /* background-color: rgb(0, 0, 0, 1.2);
+    transition: all 5s ease-in; */
 }
 
 
 
-.dialog.opened::backdrop {
+.myDialog.opened::backdrop {
     opacity: 1;
-    background-color: rgba(42, 170, 25, 0.5);
-    transition: all 5s ease-in;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 2.3s ease-in;
+    
 }
+
+
 
 
 
@@ -169,22 +180,18 @@ Dialog open close     */
 .Header{   
 
     display: flex;
-
-    color: red;
     height: 55px;
     background-color: rgb(3, 14, 77);
-    /* flex-shrink: 0; */
+  
     
 }
 
 .Footer{
 
     display: flex;
-
-    color: red;
     height: 55px;
     background-color: rgb(3, 14, 77);
-    /* flex-shrink: 0; */
+    
 }
 
 .Fotogram_Logo{
