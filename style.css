@@ -1,5 +1,15 @@
 
+:root { 
 
+      --main-background: rgb(0, 68, 185);
+      --pane-padding: 5px 42px;
+      --HeaderFooterBG: rgb(3, 14, 77);
+      --HFerHeigh: 55px;
+      --colorArrows: red;
+     
+
+ /* var(--HeaderFooterBG) */
+}
 
 .body{
 
@@ -36,16 +46,46 @@ p{
 
 }
 
+
+
+
+
+
+/* Header Footer     
+
+*/
+
+
+
+.Header{   
+
+    display: flex;
+    height: var(--HFerHeigh); 
+    background-color: var(--HeaderFooterBG) 
+  
+    
+}
+
+.Footer{
+
+    display: flex;
+    height: var(--HFerHeigh);
+    background-color: var(--HeaderFooterBG) 
+}
+
+
 .MyMain {
     
     display: flex;
     flex: 1;
     justify-content: flex-start;
-    background-color: rgb(0, 68, 185);
     align-items: center;
     flex-direction: column;
     align-self: center;
     width: 100vw;
+    background-color: var(--main-background) 
+
+
 }
 
 
@@ -114,7 +154,7 @@ p{
 .myDialog{
     
     /* margin 100px; */
-    border: 5px solid rgb(243, 6, 6);
+    border: 5px solid rgb(251, 254, 199);
     transform: translateX(50px);
     transition: all 2s ease-in;
   
@@ -125,7 +165,7 @@ p{
 
 
 .myDialog.opened {
-    border: 5px solid rgb(232, 51, 10);
+    border: 5px solid rgb(3, 67, 140);
     transition: all 2s ease-in;
     background-color: transparent;
 
@@ -169,30 +209,6 @@ Dialog open close     */
 
 
 
-
-
-/* Header Footer     
-
-*/
-
-
-
-.Header{   
-
-    display: flex;
-    height: 55px;
-    background-color: rgb(3, 14, 77);
-  
-    
-}
-
-.Footer{
-
-    display: flex;
-    height: 55px;
-    background-color: rgb(3, 14, 77);
-    
-}
 
 .Fotogram_Logo{
 
@@ -261,7 +277,7 @@ Dialog open close     */
 
     .myLeftButton{     
     
-      color: red;
+      color: var(--colorArrows);
         display: flex;
         width: 20px;
         align-items: center;
@@ -274,7 +290,7 @@ Dialog open close     */
     .myRightButton{
         
         
-        color: red;
+        color: var(--colorArrows);
         display: flex;
         width: 20px;
         align-items: center;
