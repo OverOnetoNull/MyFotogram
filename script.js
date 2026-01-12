@@ -16,27 +16,6 @@ function noPropagation(event) {
 
 
 
-// Öffnet den Dialog
-function openDialog() {
-  dialogRef.showModal();
-  dialogRef.classList.add("opened");
-}
-  
-
-// Schließt den Dialog
-function closeDialog() {
-    dialogRef.close();
-    dialogRef.classList.remove("opened");
-}
-
-
-function openImage(index) {
-  currentIndex = index;   //  Das ausgewählte Bild
-  updateDialogImage();    //  Bild setzen
-  openDialog();       //  Dialog öffnen
-}
-
-
 
 
 let fruits = [
@@ -62,6 +41,31 @@ const dialogRef = document.getElementById("myDialog");
 
 
 
+
+
+
+// Öffnet den Dialog
+function openDialog() {
+  dialogRef.showModal();
+  dialogRef.classList.add("opened");
+}
+  
+
+// Schließt den Dialog
+function closeDialog() {
+    dialogRef.close();
+    dialogRef.classList.remove("opened");
+}
+
+
+function openImage(index) {
+  currentIndex = index;   //  Take clicked img in the current Index
+  updateDialogImage();    //  Update the Picture
+  openDialog();       //      Open the Dialog 
+}
+
+
+
 // Includes the Array List  in the Elements
 
 function containsElement(array, element) {
@@ -71,9 +75,13 @@ function containsElement(array, element) {
 
 
 function initArrays() {
+
+
   let contentRef = document.getElementById('my_content');
 
   contentRef.innerHTML = "";
+
+// edit th img in index Picked element
 
 
   for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
@@ -103,6 +111,11 @@ function showImageFromArray(index) {
   
 }
 
+// The tight Mect Button change the index 1+ 
+// and if th current index is bigger 
+// it will change index to 0 (start of array)
+
+
 
 
 function nextImage() {
@@ -118,6 +131,10 @@ function nextImage() {
 
 
 
+//change like in next Button but minus index
+// and if index sets smaller then 0 (array start)
+// it will set index on -1 (array end)
+
 function prevImage() {
   currentIndex--;
 
@@ -131,6 +148,10 @@ function prevImage() {
 function updateDialogImage() {
 
 
+
+
+
+  // set the dialog Image in the form of indexed Picture 
   
   const dialogImg = document.getElementById("DialogImgID");
   dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
