@@ -10,7 +10,7 @@
 function noPropagation(event) {
   event.stopPropagation();
 
-  console.log(stop)
+ 
 }
 
 
