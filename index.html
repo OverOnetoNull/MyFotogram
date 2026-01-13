@@ -40,7 +40,7 @@
                  
                            <div class="my_divcontent">
 
-                             <div class="gallery" id="my_content" onclick="openDialog()"></div>
+                             <div class="gallery" id="my_content" onclick="openDialog()" tabindex="0" ></div>
 
                            </div>   
 
@@ -71,7 +71,7 @@
                 
             <div  onclick="noPropagation(event)" class="myCloseButtonDiv">
 
-                 <div onclick="closeDialog()">
+                 <div onclick="closeDialog()" tabindex="0" >
                     
                     <p class="p">X</p>
 
@@ -83,7 +83,7 @@
             <div onclick="noPropagation" class="consoleAndMain">
                 
 
-                <div class="myLeftButton" onclick="noPropagation(event)">
+                <div class="myLeftButton" onclick="noPropagation(event)" tabindex="0" >
                     
                    
                     <p onclick= "prevImage()">&lArr;</p>
@@ -93,10 +93,10 @@
 
                 <img onclick=" noPropagation(event)"  id="DialogImgID" class="DialogImgClass" alt="">
                 
-                <div class="myRightButton"  onclick= "noPropagation(event)">
+                <div class="myRightButton"  onclick= "noPropagation(event)"  tabindex="0" >
                     
-                      <p onclick= "nextImage()">&rArr;</p>
-                    
+                      <p onclick= "nextImage()" tabindex="" >&rArr;</p>
+
                     </div>
 
   

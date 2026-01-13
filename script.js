@@ -90,7 +90,9 @@ function initArrays() {
         class="gallery-img"
          src="./img/pictures/${fruits[indexFruits]}.jpg"
            onclick="openImage(${indexFruits})"
-      >
+             tabindex="0">
+     
+           >
     `;
   }
 }
@@ -117,7 +119,7 @@ function showImageFromArray(index) {
 // and if th current index is bigger 
 // it will change index to 0 (start of array)
 
-
+ 
 
 
 function nextImage() {
@@ -161,5 +163,10 @@ function updateDialogImage() {
 }
 
  
+// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key 
+// solution set enter to click Buttons 
+// for WCAG Konformity
 
-   
+// SetEnterForClick
+
+
