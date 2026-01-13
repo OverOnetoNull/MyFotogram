@@ -239,6 +239,7 @@ Dialog open close     */
   margin-top: 3px;
   margin-left: 5px;
   height: 48px;
+  /* width: 350px; */
 
 
 }
@@ -391,6 +392,8 @@ Dialog open close     */
 
 .Fotogram_Logo {
     height: 35px;
+/* 
+    width: 250px; */
 }
 
 

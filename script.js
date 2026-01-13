@@ -90,9 +90,8 @@ function initArrays() {
         class="gallery-img"
          src="./img/pictures/${fruits[indexFruits]}.jpg"
            onclick="openImage(${indexFruits})"
-             tabindex="0">
-     
-           >
+             tabindex="0"
+     >
     `;
   }
 }
