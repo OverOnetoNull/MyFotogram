@@ -163,10 +163,59 @@ function updateDialogImage() {
 }
 
  
-// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key 
+
+
 // solution set enter to click Buttons 
 // for WCAG Konformity
 
 // SetEnterForClick
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const active = document.activeElement;
 
+    if (active && active.hasAttribute("tabindex")) {
+      active.click();
+    }
+    
+
+
+  }
+});
+
+
+
+
+
+
+
+
+
+// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key 
+
+
+// window.addEventListener("keydown", (event) => {
+//   if (event.defaultPrevented) {
+//     return; // Do nothing if the event was already processed
+//   }
+
+//   switch (event.key) {
+//     case "ArrowLeft":
+//       // Vorheriges Bild anzeigen
+//       prevImage();
+//       break;
+//     case "ArrowRight":
+//       // Nächstes Bild anzeigen
+//       nextImage();
+//       break;
+//     case "Enter":
+//       // Dialog schließen (für Barrierefreiheit)
+//        return;
+//       break;
+//     default:
+//       return; // Quit when this doesn't handle the key event.
+//   }
+
+//   // Cancel the default action to avoid it being handled twice
+//   event.preventDefault();
+// });

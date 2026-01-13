@@ -150,6 +150,13 @@ p{
 
 }
 
+.gallery-img:focus {
+
+  
+    transition: 0.47s;
+    border: solid rgb(21, 171, 41);
+
+}
 
 
 
