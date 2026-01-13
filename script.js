@@ -44,14 +44,14 @@ const dialogRef = document.getElementById("myDialog");
 
 
 
-// Öffnet den Dialog
+// Open the Dialog
 function openDialog() {
   dialogRef.showModal();
   dialogRef.classList.add("opened");
 }
   
 
-// Schließt den Dialog
+// Clos the Dialog
 function closeDialog() {
     dialogRef.close();
     dialogRef.classList.remove("opened");
@@ -96,12 +96,14 @@ function initArrays() {
 }
 
 
-    // Globaler Index
+    // Global setting for Index
 
 
     let currentIndex = 0;
 
-  //open Dialog  with  Array-Index
+
+
+  //create Dialog IMG s with  Array-Index
 
 function showImageFromArray(index) {
   currentIndex = index; 
