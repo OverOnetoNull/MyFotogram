@@ -236,7 +236,7 @@ Dialog open close     */
 
 }
 
-soleAndMain{
+.consoleAndMain{
    
    display: flex;
    flex-direction: row;
