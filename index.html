@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="an Photoalbum with Zomm in 
-    Dialog and changable picters in the dialog">
+    <meta name="description" content="An Photoalbum with zoom in Dialog use Tab fpr choose enter for choose your picture and escep to close the Dialog">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
     
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
@@ -73,7 +73,7 @@
                 
             <div  onclick="noPropagation(event)"  class="myCloseButtonDiv">
 
-                 <div onkeypress="closeDialog" onclick="closeDialog()" tabindex="-1" >
+                 <div onkeypress="closeDialog" onclick="closeDialog()" tabindex="1" >
                     
                     <p class="p">X</p>
 
@@ -88,7 +88,7 @@
                 <div class="myLeftButton" onclick="noPropagation(event)" >
                     
                    
-                    <p onkeyleft= "prevImage()" onclick= "prevImage()"  tabindex="0">&lArr;</p>
+                    <p onkeyleft= "prevImage()" onclick= "prevImage()"  tabindex="2">&lArr;</p>
 
 
                 </div>
@@ -97,7 +97,7 @@
                 
                 <div class="myRightButton"  onclick= "noPropagation(event)" >
                     
-                      <p onclick= "nextImage()" tabindex="0" >&rArr;</p>
+                      <p onclick= "nextImage()" tabindex="3" >&rArr;</p>
 
                     </div>
 
