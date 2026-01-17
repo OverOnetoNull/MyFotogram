@@ -4,9 +4,6 @@
 // Bubbling
 
 
-
-
-
 function noPropagation(event) {
   event.stopPropagation();
 
@@ -14,36 +11,25 @@ function noPropagation(event) {
 }
 
 
-
-
-
-
 let fruits = [
-  "ai-generated-8756365_1280",
-  "boat-4868355_640",
-  "boat-7497807_640",
-  "boat-7497809_640",
-  "coast-6917777_640",
-  "dominicana-4620393_640",
-  "sea-4994010_640",
-  "sun-4475490_640",
-  "sun-5039871_640",
- 
-  "sunset-5429861_640",
-  "water-4873775_1280"
+  "dominicana_Palm_Beach",
+  "Mystic_Water",
+  "red_Sky_Boat",
+  "Sail_from_Sun",
+  "Sail_from_Sun_three",
+  "Sail_from_Sun_two",
+  "Sunny_Coast",
+  "Sunrise_Beach_jump",
+  "Sunrise_Beach",
+  "Sunset_Fields",
+  "watch_Sun_GoBy"
+  
 ];
 
 
 
 const dialogRef = document.getElementById("myDialog");
  
-
-
-
-
-
-
-
 // Open the Dialog
 function openDialog() {
   dialogRef.showModal();
@@ -51,7 +37,7 @@ function openDialog() {
 }
   
 
-// Clos the Dialog
+// Close the Dialog
 function closeDialog() {
     dialogRef.close();
     dialogRef.classList.remove("opened");
