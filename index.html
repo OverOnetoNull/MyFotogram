@@ -49,23 +49,48 @@
         
         <dialog onclick="closeDialog()" id="myDialog" class="myDialog">
             
-         <section onclick=" NoPropagation()" class="mySection" id="mySection">            
+         <section onclick=" noPropagation(event)" class="mySection" id="mySection">            
                 
-            <nav  onclick="noPropagation(event)"  class="myCloseButtonDiv">
+            <nav onclick="noPropagation(event)"  class="myClosePlusNavresponsiveDiv"></nav>
 
-                 <div onkeypress="closeDialog" onclick="closeDialog()" tabindex="1" >
+            
+                    <div class="close_Resp" onkeypress="closeDialog()" onclick="closeDialog()" tabindex="1" >
                     
-                    <p class="p">X</p>
+                <p class="p">X</p>
 
-                 </div>
+                </div>  
+            
+                 
+            <div class="consoles_Resp">
+
+                <nav class="myLeftButton" onclick="noPropagation(event)" >
+                    <p onkeyleft= "prevImage()" onclick= "prevImage()"  tabindex="2">&lArr;</p>
+                </nav>
+
+                            <nav class="myRightButton"  onclick= "noPropagation(event)" >                   
+                      <p onclick= "nextImage()" tabindex="3" >&rArr;</p>
+
+                </nav>
+
+
+                    <div onkeypress="closeDialog()" onclick="closeDialog()" tabindex="1" >
+                    
+                <p class="p">X</p>
+
+                </div>  
+
+        </div>
+                
+                                   
+
 
             </nav>
             
 
-            <div onclick="noPropagation" class="consoleAndMain">
+            <div onclick="noPropagation(event)" class="consoleAndMain">
                 
 
-                <nav class="myLeftButton" onclick="noPropagation(event)" >
+                <nav class="myLeftButton myLeftButtonResp" onclick="noPropagation(event)" >
                     
                    
                     <p onkeyleft= "prevImage()" onclick= "prevImage()"  tabindex="2">&lArr;</p>
@@ -75,7 +100,7 @@
 
                 <img onclick=" noPropagation(event)"  id="DialogImgID" class="DialogImgClass" alt="">
                 
-                <nav class="myRightButton"  onclick= "noPropagation(event)" >
+                <nav class="myRightButton myRightButtonResp"  onclick= "noPropagation(event)" >
                     
                       <p onclick= "nextImage()" tabindex="3" >&rArr;</p>
 

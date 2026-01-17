@@ -62,12 +62,12 @@ function containsElement(array, element) {
 
 function initArrays() {
 
-
+  
   let contentRef = document.getElementById('my_content');
 
   contentRef.innerHTML = "";
 
-// edit th img in index Picked element
+// edit the img in index Picked element
 
 
   for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
@@ -80,6 +80,8 @@ function initArrays() {
      >
     `;
   }
+
+
 }
 
 

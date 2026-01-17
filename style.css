@@ -2,7 +2,7 @@
 :root { 
 
       --main-background: rgb(0, 68, 185);
-      --pane-padding: 5px 42px;
+      
       --HeaderFooterBG: rgb(3, 14, 77);
       --HFerHeigh: 55px;
       --colorArrows: red;
@@ -197,13 +197,10 @@ p{
 }
 
 
-.myCloseButtonDiv{
+.myClosePlusNavresponsiveDiv{
 
-display: flex;
+display: none;
 flex-direction: row-reverse;
-
-
-
 
 }
 
@@ -321,17 +318,22 @@ Dialog open close     */
 
     }
 
+.consoles_Resp{
+
+  display: none;
+}
+
+
+.close_Resp{
+
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
 
 
       /* Media Querris */
-
-      
-
-
-
-      
-
-
 
       @media (max-width: 858px) {
 
@@ -363,6 +365,15 @@ Dialog open close     */
 
 @media (max-width: 480px) {
 
+
+  .myClosePlusNavresponsiveDiv{
+
+display: flex;
+flex-direction: row-reverse;
+
+}
+
+
   .Header,
   .Footer{
     height: 45px;
@@ -377,10 +388,17 @@ Dialog open close     */
     min-width: 250px;
   }
 
-  .myLeftButton,
-  .myRightButton{
-    width: 30px;
+  .consoles_Resp{
+
+  display: flex;
+}
+  .myLeftButtonResp,
+  .myRightButtonResp{
+    display: none;
   }
+
+
+.close_Resp{display: none;}
 
   
 .gallery-img{
