@@ -1,3 +1,5 @@
 <!-- so hi hier hab ich nochmal alles mit entsprechender 
 ordnung abgearbeitet nochmal sry ich hab hier grad viel stress auf arbeit was und das hat mich schon bisschen unter druck gestzt einfach weiter zu kommen... war en fehler nochmal sry,  ich hatte schon versucht zu verstehn was da passiert aber ich kann das notwendigste echt meistens schon aus euren  videos lesen und verstehn  ich hab alles auch noch sauberer mit github dokumentiert, sagt bitte bescheid wenn es da verbesserungen gibt aber ich glaub ichnoch komm gut voran  will grad  die wcag fertig machen,   ich weiß nicht ich versuch immer erst mit dem technischen klar zu kommen und dann solche feinheiten habt ihr da zb feste prioritäten oder klare vorgehensweisen?
+
+ich habe noch einen fehler den ich einfach nicht hinbekomme  der hintergrund vom Main, wenn ich auf den drücke aktiviert sich ein bild,...das sollte es nicht
 -->

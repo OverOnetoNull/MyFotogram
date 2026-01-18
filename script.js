@@ -1,15 +1,8 @@
-
-
-
 // Bubbling
-
 
 function noPropagation(event) {
   event.stopPropagation();
-
- 
 }
-
 
 let fruits = [
   "dominicana_Palm_Beach",
@@ -22,53 +15,41 @@ let fruits = [
   "Sunrise_Beach_jump",
   "Sunrise_Beach",
   "Sunset_Fields",
-  "watch_Sun_GoBy"
-  
+  "watch_Sun_GoBy",
 ];
 
-
-
 const dialogRef = document.getElementById("myDialog");
- 
+
 // Open the Dialog
 function openDialog() {
   dialogRef.showModal();
   dialogRef.classList.add("opened");
 }
-  
 
 // Close the Dialog
 function closeDialog() {
-    dialogRef.close();
-    dialogRef.classList.remove("opened");
+  dialogRef.close();
+  dialogRef.classList.remove("opened");
 }
-
 
 function openImage(index) {
-  currentIndex = index;   //  Take clicked img in the current Index
-  updateDialogImage();    //  Update the Picture
-  openDialog();       //      Open the Dialog 
+  currentIndex = index; //  Take clicked img in the current Index
+  updateDialogImage(); //  Update the Picture
+  openDialog(); //      Open the Dialog
 }
-
-
 
 // Includes the Array List  in the Elements
 
 function containsElement(array, element) {
-    return array.includes(element);
-
+  return array.includes(element);
 }
 
-
 function initArrays() {
-
-  
-  let contentRef = document.getElementById('my_content');
+  let contentRef = document.getElementById("my_content");
 
   contentRef.innerHTML = "";
 
-// edit the img in index Picked element
-
+  // edit the img in index Picked element
 
   for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
     contentRef.innerHTML += `
@@ -80,47 +61,34 @@ function initArrays() {
      >
     `;
   }
-
-
 }
 
+// Global setting for Index
 
-    // Global setting for Index
+let currentIndex = 0;
 
-
-    let currentIndex = 0;
-
-
-
-  //create Dialog IMG s with  Array-Index
+//create Dialog IMG s with  Array-Index
 
 function showImageFromArray(index) {
-  currentIndex = index; 
+  currentIndex = index;
   const dialogImg = document.getElementById("DialogImgID");
   dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
   dialogImg.alt = fruits[currentIndex];
-  
 }
 
-// The tight Mect Button change the index 1+ 
-// and if th current index is bigger 
+// The tight Mect Button change the index 1+
+// and if th current index is bigger
 // it will change index to 0 (start of array)
 
- 
-
-
 function nextImage() {
-
-     currentIndex++;
+  currentIndex++;
 
   if (currentIndex >= fruits.length) {
-     currentIndex = 0;
+    currentIndex = 0;
   }
 
   updateDialogImage();
 }
-
-
 
 //change like in next Button but minus index
 // and if index sets smaller then 0 (array start)
@@ -130,29 +98,21 @@ function prevImage() {
   currentIndex--;
 
   if (currentIndex < 0) {
-      currentIndex = fruits.length - 1;
+    currentIndex = fruits.length - 1;
   }
 
   updateDialogImage();
 }
 
+// set the dialog Image in the form of indexed Picture
+
 function updateDialogImage() {
-
-
-
-
-
-  // set the dialog Image in the form of indexed Picture 
-  
   const dialogImg = document.getElementById("DialogImgID");
   dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
   dialogImg.alt = fruits[currentIndex];
 }
 
- 
-
-
-// solution set enter to click Buttons 
+// solution set enter to click Buttons
 // for WCAG Konformity
 
 // SetEnterForClick
@@ -164,22 +124,10 @@ document.addEventListener("keydown", (event) => {
     if (active && active.hasAttribute("tabindex")) {
       active.click();
     }
-    
-
-
   }
 });
 
-
-
-
-
-
-
-
-
-// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key 
-
+// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
 
 // window.addEventListener("keydown", (event) => {
 //   if (event.defaultPrevented) {

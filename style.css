@@ -1,53 +1,52 @@
+:root {
 
-:root { 
+  --main-background: rgb(0, 68, 185);
 
-      --main-background: rgb(0, 68, 185);
-      
-      --HeaderFooterBG: rgb(3, 14, 77);
-      --HFerHeigh: 55px;
-      --colorArrows: red;
-      --colorArrBordercolor: rgba(193, 44, 238, 0.39);
-      --colorArrBackgroundcolor: rgb(13, 7, 193);
-      --consoleColorH1element:red;
-      --consoleWidthH1element: 23px;
-      --consoleHeightH1element: 23px;
+  --HeaderFooterBG: rgb(3, 14, 77);
+  --HFerHeigh: 55px;
+  --colorArrows: red;
+  --colorArrBordercolor: rgba(193, 44, 238, 0.39);
+  --colorArrBackgroundcolor: rgb(13, 7, 193);
+  --consoleColorH1element: red;
+  --consoleWidthH1element: 23px;
+  --consoleHeightH1element: 23px;
 
 
- /* var(--HeaderFooterBG) */
+  /* var(--HeaderFooterBG) */
 }
 
-.body{
+.body {
 
-    margin: 0;    
-    height: 100vh;
-    flex-direction: column; 
-    display: flex;    
-    
+  margin: 0;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+
 }
 
 
 
 
-.h1{ 
+.h1 {
 
   color: rgb(189, 28, 28);
-  font-size: 32px;
+  font-size: 62px;
   border: 16px;
   border-color: rgb(220, 175, 175);
 }
 
 
 
-p{
+p {
   color: var(--consoleColorH1element);
   width: var(--consoleWidthH1element);
   height: var(--consoleHeightH1element);
- 
+
   border: solid 10px;
-  
+
   border-color: var(--colorArrBordercolor);
   background-color: var(--colorArrBackgroundcolor);
-  
+
 
 
   border-radius: 50%;
@@ -70,54 +69,51 @@ p{
 
 
 
-.Header{   
+.Header {
 
-    display: flex;
-    height: var(--HFerHeigh); 
-    background-color: var(--HeaderFooterBG) 
-  
-    
+  display: flex;
+  height: var(--HFerHeigh);
+  background-color: var(--HeaderFooterBG);
 }
 
-.Footer{
+.Footer {
 
-    display: flex;
-    height: var(--HFerHeigh);
-    background-color: var(--HeaderFooterBG) 
+  display: flex;
+  height: var(--HFerHeigh);
+  background-color: var(--HeaderFooterBG);
 }
 
 /* All  in Main */
 
 
 .MyMain {
-    
-    display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    align-self: center;
-    width: 100vw;
-    background-color: var(--main-background) 
 
-
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  width: 100vw;
+  background-color: var(--main-background);
 }
 
 
 
- .my_divcontent{
+.my_divcontent {
 
   width: 100%;
-  height: auto;       
+  height: auto;
   display: flex;
-  margin-left: 55px;
-  margin-right: 55px;
-  
+  margin-left: 155px;
+  margin-right: 155px;
+
+
 }
 
 
 
-.gallery{
+.gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -127,34 +123,36 @@ p{
   align-content: flex-start;
   justify-content: center;
 
-  
+
+
 }
 
 
 
-.gallery-img{
+.gallery-img {
   width: 210px;
   height: 210px;
   object-fit: cover;
   display: block;
   cursor: pointer;
   border: solid rgb(64, 0, 255);
+  border-radius: 18px;
 }
 
 
 .gallery-img:hover {
 
 
-    transition: 0.47s;
-    border: solid rgb(21, 171, 41);
+  transition: 0.47s;
+  border: solid rgb(21, 171, 41);
 
 }
 
 .gallery-img:focus {
 
-  
-    transition: 0.47s;
-    border: solid rgb(21, 171, 41);
+
+  transition: 0.47s;
+  border: solid rgb(21, 171, 41);
 
 }
 
@@ -175,13 +173,13 @@ p{
 
 
 
-.myDialog{
-    
-    /* margin 100px; */
-    border: 5px solid rgb(251, 254, 199);
-    transform: translateX(0px);
-    transition: all 2s ease-in;
-  
+.myDialog {
+
+  /* margin 100px; */
+  border: 5px solid rgb(251, 254, 199);
+  transform: translateX(0px);
+  transition: all 2s ease-in;
+
 }
 
 
@@ -189,35 +187,34 @@ p{
 
 
 .myDialog.opened {
-    border: 5px solid rgb(3, 67, 140);
-    transition: all 2s ease-in;
-    background-color: transparent;
+  border: 5px solid rgb(3, 67, 140);
+  transition: all 2s ease-in;
+  background-color: transparent;
 
 
 }
 
 
-.myClosePlusNavresponsiveDiv{
+.myClosePlusNavresponsiveDiv {
 
-display: none;
-flex-direction: row-reverse;
+  display: none;
+  flex-direction: row-reverse;
 
 }
 
 
 .myDialog::backdrop {
-    opacity: 0;
-    /* background-color: rgb(0, 0, 0, 1.2);
-    transition: all 5s ease-in; */
+  opacity: 0;
+
 }
 
 
 
 .myDialog.opened::backdrop {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.3);
-    transition: all 2.3s ease-in;
-    
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 2.3s ease-in;
+
 }
 
 
@@ -231,100 +228,87 @@ Dialog open close     */
 
 
 
-.Fotogram_Logo{
+.Fotogram_Logo {
 
   margin-top: 3px;
   margin-left: 5px;
   height: 48px;
-  /* width: 350px; */
+
 
 
 }
 
-.consoleAndMain{
-   
-   display: flex;
-   flex-direction: row;
-   align-self: center;
-   margin: 0;
-   flex-wrap: wrap;
-   justify-content: center;
-   gap: 10px;
-    
-    }
+.consoleAndMain {
 
-
-
-.mySection{
-
-
-    display:flex;           
-    flex-direction: column;
- 
-  }
-
-
-
-
-
-
-    
-
-    .DialogImgClass{
-
-     display:flex;
-
-
-    width: 700px;
-    height: 600px;
-    min-width:400px ;
-   
-     align-items: center;
-     object-fit: contain;
-     background-color: transparent;
-     /* background-size: cover; */
-     border: 22 solid rgb(26, 38, 147);
-
-
-
-     }
-
-
-
-     /* Buttons */
-
-    .myLeftButton{     
-    
-      color: var(--colorArrows);
-        display: flex;
-        width: 20px;
-        align-items: center;
-        background-color: transparent;
-        justify-content: center;
-
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 
 }
 
-    .myRightButton{
-        
-        
-        color: var(--colorArrows);
-        display: flex;
-        width: 20px;
-        align-items: center;
-        background-color: transparent;
-        justify-content: center;
 
 
-    }
+.mySection {
 
-.consoles_Resp{
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.DialogImgClass {
+
+  display: flex;
+
+
+  width: 700px;
+  height: 600px;
+  min-width: 400px;
+
+  align-items: center;
+  object-fit: contain;
+  background-color: transparent;
+  /* background-size: cover; */
+  border: 22 solid rgb(26, 38, 147);
+
+}
+
+/* Buttons */
+
+.myLeftButton {
+
+  color: var(--colorArrows);
+  display: flex;
+  width: 20px;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+
+}
+
+.myRightButton {
+
+  color: var(--colorArrows);
+  display: flex;
+  width: 20px;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+
+}
+
+.consoles_Resp {
 
   display: none;
 }
 
 
-.close_Resp{
+.close_Resp {
 
   display: flex;
   flex-direction: row-reverse;
@@ -332,98 +316,95 @@ Dialog open close     */
 
 
 
+/* Media Querris */
 
-      /* Media Querris */
-
-      @media (max-width: 858px) {
+@media (max-width: 858px) {
 
   .Header,
-  .Footer{
+  .Footer {
     height: 50px;
   }
 
-  .MyMain{
+  .MyMain {
     padding: 10px;
     justify-content: flex-start
   }
 
-  .DialogImgClass{
+  .DialogImgClass {
     width: 300px;
     height: 300px;
     min-width: 300px;
   }
 
 
-.gallery-img{
-        height: 120px;
-        width: 120px;
-        margin: 5px;
+  .gallery-img {
+    height: 120px;
+    width: 120px;
+    margin: 5px;
 
-}
+  }
 }
 
 
 @media (max-width: 480px) {
 
 
-  .myClosePlusNavresponsiveDiv{
+  .myClosePlusNavresponsiveDiv {
 
-display: flex;
-flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row-reverse;
 
-}
+  }
 
 
   .Header,
-  .Footer{
+  .Footer {
     height: 45px;
-    font-size: 14px;
+
   }
 
-.h1{ font-size: 16px}
+  .h1 {
+    font-size: 12px
+  }
 
-  .DialogImgClass{
+  .DialogImgClass {
     width: 250px;
     height: 250px;
     min-width: 250px;
   }
 
-  .consoles_Resp{
-
-  display: flex;
-}
   .myLeftButtonResp,
-  .myRightButtonResp{
+  .myRightButtonResp {
+    display: none;
+  }
+
+  .consoles_Resp {
+
+    display: flex;
+    gap: 30px;
+    flex-direction: row-reverse;
+  }
+
+  .close_Resp {
     display: none;
   }
 
 
-.close_Resp{display: none;}
+  .gallery-img {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
 
-  
-.gallery-img{
-        height: 100px;
-        width: 100px;
-        margin: 5px;
+  }
 
-}
-
-.Fotogram_Logo {
+  .Fotogram_Logo {
     height: 35px;
-/* 
-    width: 250px; */
-}
+
+    margin-top: 1.2px;
+    margin-left: 3px;
+
+  }
 
 
 
 }
-
-
-
-
-
-
-
-
- 
-

@@ -26,7 +26,7 @@
             </header>
 
 
-            <main class="MyMain">
+            <main class="MyMain"  onclick="noPropagation(event)" >
 
 
                 <div class="my_divWebsite_title">
@@ -36,56 +36,55 @@
 
                 </div>                                   
                  
-                           <div class="my_divcontent">
+                           <div  class="my_divcontent"  onclick="noPropagation(event)" >
 
-                             <div class="gallery" id="my_content" onclick="openDialog()" alt="all my Photos you can click 
-                             it and open the dialog to Zoom"></div>
+                             <div class="gallery" id="my_content" onclick="openDialog()"></div>
 
                            </div>   
             
             </main>
-            <footer class="Footer" id="Footer">footer</footer>
+            <footer class="Footer" id="Footer"></footer>
 
         
-        <dialog onclick="closeDialog()" id="myDialog" class="myDialog">
+        <dialog onclick="closeDialog()"  id="myDialog" class="myDialog">
             
-         <section onclick=" noPropagation(event)" class="mySection" id="mySection">            
+         <section onclick="noPropagation(event)" class="mySection" id="mySection">            
                 
-            <nav onclick="noPropagation(event)"  class="myClosePlusNavresponsiveDiv"></nav>
+            <nav  onclick="noPropagation(event)"  class="myClosePlusNavresponsiveDiv"></nav>
 
             
-                    <div class="close_Resp" onkeypress="closeDialog()" onclick="closeDialog()" tabindex="1" >
+                <div class="close_Resp" >
                     
-                <p class="p">X</p>
+                <p class="p"  onclick="closeDialog()" onkeydown="closeDialog()"  tabindex="1">X</p>
+
 
                 </div>  
+
             
                  
-            <div class="consoles_Resp">
+                <div class="consoles_Resp"  onclick="noPropagation(event)" >
 
                 <nav class="myLeftButton" onclick="noPropagation(event)" >
-                    <p onkeyleft= "prevImage()" onclick= "prevImage()"  tabindex="2">&lArr;</p>
+                    <p onkeydown= "prevImage()" onclick= "prevImage()"  tabindex="2"> &lArr;  </p>
                 </nav>
 
                             <nav class="myRightButton"  onclick= "noPropagation(event)" >                   
-                      <p onclick= "nextImage()" tabindex="3" >&rArr;</p>
+                      <p onkeydown= "prevImage()" onclick= "nextImage()" tabindex="3" >   &rArr;  </p>
 
                 </nav>
 
 
-                    <div onkeypress="closeDialog()" onclick="closeDialog()" tabindex="1" >
+                    <div>
                     
-                <p class="p">X</p>
+                <p  onkeydown="closeDialog()" onclick="closeDialog()" tabindex="1"  class="p">X</p>
 
-                </div>  
+            </div>  
 
         </div>
                 
                                    
 
 
-            </nav>
-            
 
             <div onclick="noPropagation(event)" class="consoleAndMain">
                 
@@ -93,7 +92,7 @@
                 <nav class="myLeftButton myLeftButtonResp" onclick="noPropagation(event)" >
                     
                    
-                    <p onkeyleft= "prevImage()" onclick= "prevImage()"  tabindex="2">&lArr;</p>
+                    <p onkeyleft= "prevImage()" onclick= "prevImage()"  tabindex="2">  &lArr;  </p>
 
 
                 </nav>
@@ -102,13 +101,13 @@
                 
                 <nav class="myRightButton myRightButtonResp"  onclick= "noPropagation(event)" >
                     
-                      <p onclick= "nextImage()" tabindex="3" >&rArr;</p>
+                      <p onclick= "nextImage()" tabindex="3" >   &rArr;  </p>
 
                 </nav>
 
             </div>
 
-            </section>
+        </section>
 
      </dialog>
 
