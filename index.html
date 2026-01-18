@@ -26,7 +26,7 @@
             </header>
 
 
-            <main class="MyMain"  onclick="noPropagation()" >
+            <main class="MyMain"  onclick="noPropagation(event)" >
 
 
                 <div class="my_divWebsite_title">
@@ -38,7 +38,7 @@
                  
                            <div  class="my_divcontent"  onclick="noPropagation(event)" >
 
-                             <div class="gallery" id="my_content" onclick="openDialog()"></div>
+                             <div class="gallery" id="my_content"></div>
 
                            </div>   
             
@@ -50,28 +50,28 @@
             
          <section onclick="noPropagation(event)" class="mySection" id="mySection">            
                 
-            <nav  onclick="noPropagation(event)"  class="myClosePlusNavresponsiveDiv"></nav>
+            <nav  onclick="noPropagation(event)" class="myClosePlusNavresponsiveDiv"></nav>
 
             
                 <div class="close_Resp" >
                     
-                <p class="p"  onclick="closeDialog()" onkeydown="closeDialog()"  tabindex="1">X</p>
+                <p class="p" onclick="closeDialog()" onkeydown="closeDialog()"  tabindex="1">X</p>
 
 
                 </div>  
 
             
                  
-                <div class="consoles_Resp"  onclick="noPropagation(event)" >
+                <div class="consoles_Resp" onclick="noPropagation(event)" >
 
-                <nav class="myLeftButton" onclick="noPropagation(event)" >
-                    <p onkeydown= "prevImage()" onclick= "prevImage()"  tabindex="2"> &lArr;  </p>
-                </nav>
+                
+                    <p  class="myLeftButton" onkeydown= "prevImage()" onclick= "prevImage()"  tabindex="2"> &lArr;  </p>
+                
 
-                            <nav class="myRightButton"  onclick= "noPropagation(event)" >                   
-                      <p onkeydown= "nextImage()" onclick= "nextImage()" tabindex="3" >   &rArr;  </p>
+                                            
+                      <nav class="myRightButton" onkeydown= "nextImage()" onclick= "nextImage()" tabindex="3" >   &rArr;  </nav>
 
-                </nav>
+                
 
 
                     <div>
@@ -97,9 +97,9 @@
 
                 </nav>
 
-                <img onclick=" noPropagation(event)"  id="DialogImgID" class="DialogImgClass" alt="">
+                <img onclick=" noPropagation(event)" id="DialogImgID" class="DialogImgClass" alt="">
                 
-                <nav class="myRightButton myRightButtonResp"  onclick= "noPropagation(event)" >
+                <nav class="myRightButton myRightButtonResp"  >
                     
                       <p onclick= "nextImage()" tabindex="3" >   &rArr;  </p>
 
@@ -111,9 +111,9 @@
 
      </dialog>
 
+    <script src="script.js"></script>
+
 
 </body>
-
-    <script src="script.js"></script>
 
 </html>
