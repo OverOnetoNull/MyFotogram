@@ -54,10 +54,14 @@ function initArrays() {
   for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
     contentRef.innerHTML += `
       <img
+
+      role="button"
         class="gallery-img"
          src="./img/pictures/${fruits[indexFruits]}.jpg"
            onclick="openImage(${indexFruits})"
+            
              tabindex="0"
+
      >
     `;
   }
@@ -129,28 +133,28 @@ document.addEventListener("keydown", (event) => {
 
 // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
 
-// window.addEventListener("keydown", (event) => {
-//   if (event.defaultPrevented) {
-//     return; // Do nothing if the event was already processed
-//   }
+window.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
 
-//   switch (event.key) {
-//     case "ArrowLeft":
-//       // Vorheriges Bild anzeigen
-//       prevImage();
-//       break;
-//     case "ArrowRight":
-//       // Nächstes Bild anzeigen
-//       nextImage();
-//       break;
-//     case "Enter":
-//       // Dialog schließen (für Barrierefreiheit)
-//        return;
-//       break;
-//     default:
-//       return; // Quit when this doesn't handle the key event.
-//   }
+  switch (event.key) {
+    case "ArrowLeft":
+      // Vorheriges Bild anzeigen
+      prevImage();
+      break;
+    case "ArrowRight":
+      // Nächstes Bild anzeigen
+      nextImage();
+      break;
+    case "Enter":
+      // Dialog schließen (für Barrierefreiheit)
+      return;
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
 
-//   // Cancel the default action to avoid it being handled twice
-//   event.preventDefault();
-// });
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+});

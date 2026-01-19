@@ -321,15 +321,11 @@ Dialog open close     */
 
 @media (max-width: 858px) {
 
-  .Header,
-  .Footer {
-    height: 50px;
-  }
 
-  .MyMain {
+  /* .MyMain {
     padding: 10px;
     justify-content: flex-start
-  }
+  } */
 
   .DialogImgClass {
     width: 300px;
@@ -358,11 +354,6 @@ Dialog open close     */
   }
 
 
-  .Header,
-  .Footer {
-    height: 45px;
-
-  }
 
   .h1 {
     font-size: 12px
