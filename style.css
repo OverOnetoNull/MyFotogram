@@ -287,7 +287,7 @@ Dialog open close     */
   display: flex;
   width: 20px;
   align-items: center;
-  background-color: transparent;
+
   justify-content: center;
 
 }
@@ -298,7 +298,7 @@ Dialog open close     */
   display: flex;
   width: 20px;
   align-items: center;
-  background-color: transparent;
+
   justify-content: center;
 
 }
