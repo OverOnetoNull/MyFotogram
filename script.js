@@ -19,17 +19,22 @@ let fruits = [
 ];
 
 const dialogRef = document.getElementById("myDialog");
+const TabLeft = document.getElementById("tabLeft");
 
 // Open the Dialog
 function openDialog() {
   dialogRef.showModal();
   dialogRef.classList.add("opened");
+
+  document.getElementById("tabLeft").setAttribute("tabindex", "0");
 }
 
 // Close the Dialog
 function closeDialog() {
   dialogRef.close();
   dialogRef.classList.remove("opened");
+
+  document.getElementById("tabLeft").setAttribute("tabindex", "-1");
 }
 
 function openImage(index) {
@@ -60,7 +65,7 @@ function initArrays() {
          src="./img/pictures/${fruits[indexFruits]}.jpg"
            onclick="openImage(${indexFruits})"
             
-             tabindex="0"
+       
 
      >
     `;
