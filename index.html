@@ -21,7 +21,7 @@
      
             <header class="Header" id="Header">
                 
-                  <img class="Fotogram_Logo" src="./img/Fotogram_Logo.svg" alt="Fotogram">  
+                  <img  class="Fotogram_Logo" src="./img/Fotogram_Logo.svg" alt="Fotogram">  
 
             </header>
 
@@ -32,13 +32,15 @@
                 <div class="my_divWebsite_title">
 
 
-                    <h1 id="website_title" >My Favorit Fotoalbum</h1>
+                    <h1 id="website_title" tabindex="0" >My Favorit Fotoalbum </h1>
 
                 </div>                                   
                  
                         <div class="my_divcontent"  onclick="noPropagation(event)" >
 
-                          <div class="gallery" id="my_content"></div>
+                            
+                          <div class="gallery" id="my_content"  ></div>
+                       
 
                         </div>   
             
@@ -52,13 +54,15 @@
                 
             <nav  onclick="noPropagation(event)" class="myClosePlusNavresponsiveDiv"></nav>
 
+
             
-                <nav class="close_Resp" >
+            
+                <nav class="close_Resp">
                     
-                <p class="p" onclick="closeDialog()" onkeydown="closeDialog()"  tabindex="0">X</p>
-
-
+                <button role="button" class="p" onclick="closeDialog()" tabindex="0" >  X    </button>
                 </nav>  
+
+
 
             
                  
@@ -66,27 +70,24 @@
 
 
 
-                    <nav class="myRightButton "  ></nav>
+                    <nav class="myRightButton "  >
                                             
-                      <p class="myRightButton" onkeydown= "nextImage()" onclick= "nextImage()" tabindex="0" >   &rArr;  </p>
+                      <p  role="button" class="myRightButton" onclick= "nextImage()" tabindex="0" >   &rArr;  </p>
 
                     </nav>
 
 
 
-                    <nav class="myLeftButton "  ></nav>
-                    
+                    <nav class="myLeftButton"  >
+  
+                    <p  role="button" class="myLeftButton" onclick= "prevImage()"  tabindex="0"> &lArr;  </p>
                 
-                    <p  class="myLeftButton" onkeydown= "prevImage()" onclick= "prevImage()"  tabindex="0"> &lArr;  </p>
-                
-
                     </nav>
 
-                    <div>
-                    
-                <p  onkeydown="closeDialog()" onclick="closeDialog()" tabindex="0"  class="p">X</p>
+                <nav>  
+                     <p  role="button"  onclick="closeDialog()" tabindex="0" >X</p>
 
-            </div>  
+                </nav>  
 
         </div>
                 
@@ -100,7 +101,7 @@
                 <nav class="myLeftButton myLeftButtonResp" onclick="noPropagation(event)" >
                     
                    
-                    <p onclick= "prevImage()" id="tabLeft" tabindex="-1">  &lArr;  </p>
+                    <button  role="button" onclick= "prevImage()" id="tabLeft" tabindex="0">  &lArr;  </button>
 
 
                 </nav>
@@ -109,7 +110,7 @@
                 
                 <nav class="myRightButton myRightButtonResp" onclick="noPropagation(event)">
                     
-                      <p onclick= "nextImage()" tabindex="0" >   &rArr;  </p>
+                      <button  role="button" onclick= "nextImage()" tabindex="0" >   &rArr;  </button>
 
                 </nav>
 

@@ -4,7 +4,7 @@ function noPropagation(event) {
   event.stopPropagation();
 }
 
-let fruits = [
+let pictures = [
   "dominicana_Palm_Beach",
   "Mystic_Water",
   "red_Sky_Boat",
@@ -56,18 +56,24 @@ function initArrays() {
 
   // edit the img in index Picked element
 
-  for (let indexFruits = 0; indexFruits < fruits.length; indexFruits++) {
+  for (
+    let indexPictures = 0;
+    indexPictures < pictures.length;
+    indexPictures++
+  ) {
     contentRef.innerHTML += `
-      <img
+      
+  
+    <img onclick="openImage(${indexPictures})"
 
-      role="button"
+      
         class="gallery-img"
-         src="./img/pictures/${fruits[indexFruits]}.jpg"
-           onclick="openImage(${indexFruits})"
-            
-       
-
+         src="./img/pictures/${pictures[indexPictures]}.jpg"
+        
+        
      >
+   
+
     `;
   }
 }
@@ -81,18 +87,18 @@ let currentIndex = 0;
 function showImageFromArray(index) {
   currentIndex = index;
   const dialogImg = document.getElementById("DialogImgID");
-  dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
-  dialogImg.alt = fruits[currentIndex];
+  dialogImg.src = `./img/pictures/${pictures[currentIndex]}.jpg`;
+  dialogImg.alt = pictures[currentIndex];
 }
 
-// The tight Mect Button change the index 1+
-// and if th current index is bigger
+// The right Mect Button change the index 1+
+// and if thr current index is bigger
 // it will change index to 0 (start of array)
 
 function nextImage() {
   currentIndex++;
 
-  if (currentIndex >= fruits.length) {
+  if (currentIndex >= pictures.length) {
     currentIndex = 0;
   }
 
@@ -107,7 +113,7 @@ function prevImage() {
   currentIndex--;
 
   if (currentIndex < 0) {
-    currentIndex = fruits.length - 1;
+    currentIndex = pictures.length - 1;
   }
 
   updateDialogImage();
@@ -117,8 +123,8 @@ function prevImage() {
 
 function updateDialogImage() {
   const dialogImg = document.getElementById("DialogImgID");
-  dialogImg.src = `./img/pictures/${fruits[currentIndex]}.jpg`;
-  dialogImg.alt = fruits[currentIndex];
+  dialogImg.src = `./img/pictures/${pictures[currentIndex]}.jpg`;
+  dialogImg.alt = pictures[currentIndex];
 }
 
 // solution set enter to click Buttons
@@ -126,15 +132,15 @@ function updateDialogImage() {
 
 // SetEnterForClick
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    const active = document.activeElement;
+// document.addEventListener("keydown", (event) => {
+//   if (event.key === "Enter") {
+//     const active = document.activeElement;
 
-    if (active && active.hasAttribute("tabindex")) {
-      active.click();
-    }
-  }
-});
+//     if (active && active.hasAttribute("tabindex")) {
+//       active.click();
+//     }
+//   }
+// });
 
 // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
 
