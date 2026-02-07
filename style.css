@@ -17,7 +17,12 @@
   margin: 0;
   height: 100vh;
   flex-direction: column;
+  align-content: center;
+
   display: flex;
+  background-color: var(--main-background);
+
+
 
 }
 
@@ -75,13 +80,19 @@ p {
 .Header {
 
   display: flex;
+  justify-content: center;
   height: var(--HFerHeigh);
   background-color: var(--HeaderFooterBG);
+
+
+
 }
 
 .Footer {
 
   display: flex;
+
+  ;
   height: var(--HFerHeigh);
   background-color: var(--HeaderFooterBG);
 }
@@ -110,7 +121,7 @@ p {
   display: flex;
   margin-left: 155px;
   margin-right: 155px;
-
+  justify-content: center;
 
 }
 
@@ -125,7 +136,7 @@ p {
   margin: 5px;
   align-content: flex-start;
   justify-content: center;
-
+  max-width: 1440px;
 
 
 }
@@ -227,7 +238,15 @@ Dialog open close     */
 
 
 
+.LogoMaxWidth {
 
+  display: flex;
+  width: 100vw;
+  max-width: 1440px;
+
+  ;
+
+}
 
 
 .Fotogram_Logo {

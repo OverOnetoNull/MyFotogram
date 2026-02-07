@@ -60,33 +60,31 @@ function containsElement(array, element) {
   return array.includes(element);
 }
 
+function galleryImageTemplate(name, index) {
+  return `
+    <img
+      onclick="openImage(${index})"
+      class="gallery-img"
+      src="./img/pictures/${name}.jpg"
+      tabindex="0"
+      data-index="${index}"
+    >
+  `;
+}
+
 function initArrays() {
-  let contentRef = document.getElementById("my_content");
-
+  const contentRef = document.getElementById("my_content");
   contentRef.innerHTML = "";
-
-  // edit the img in index Picked element
 
   for (
     let indexPictures = 0;
     indexPictures < pictures.length;
     indexPictures++
   ) {
-    contentRef.innerHTML += `
-      
-  
-    <img onclick="openImage(${indexPictures})"
-
-      
-        class="gallery-img"
-         src="./img/pictures/${pictures[indexPictures]}.jpg"
-        tabindex="0"
-        data-index="${indexPictures}"
-        
-     >
-   
-
-    `;
+    contentRef.innerHTML += galleryImageTemplate(
+      pictures[indexPictures],
+      indexPictures,
+    );
   }
 }
 
@@ -172,41 +170,43 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-function trapFocusInDialog() {
-  const focusableSelector = `
-    button,
-    [href],
-    input,
-    select,
-    textarea,
-    [tabindex]:not([tabindex="-1"])
+function getFocusableElements(container) {
+  const selector = `
+    button, [href], input, select,
+    textarea, [tabindex]:not([tabindex="-1"])
   `;
+  return container.querySelectorAll(selector);
+}
 
-  const focusableElements = dialogRef.querySelectorAll(focusableSelector);
-  if (focusableElements.length === 0) return;
+function focusFirst(elements) {
+  if (!elements.length) return;
+  elements[0].focus();
+}
 
-  const firstFocusableElement = focusableElements[0];
-  const lastFocusableElement = focusableElements[focusableElements.length - 1];
+function handleTabCycle(event, first, last) {
+  if (event.key !== "Tab") return;
 
-  firstFocusableElement.focus();
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  }
 
-  dialogRef.addEventListener("keydown", (event) => {
-    if (event.key !== "Tab") return;
+  if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
 
-    if (event.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === firstFocusableElement) {
-        event.preventDefault();
-        lastFocusableElement.focus();
-      }
-    } else {
-      // Tab
-      if (document.activeElement === lastFocusableElement) {
-        event.preventDefault();
-        firstFocusableElement.focus();
-      }
-    }
-  });
+function trapFocusInDialog() {
+  const elements = getFocusableElements(dialogRef);
+  if (!elements.length) return;
+
+  const first = elements[0];
+  const last = elements[elements.length - 1];
+
+  focusFirst(elements);
+
+  dialogRef.addEventListener("keydown", (e) => handleTabCycle(e, first, last));
 }
 
 document.addEventListener("DOMContentLoaded", initArrays);
