@@ -22,6 +22,8 @@ let pictures = [
 
 let currentIndex = 0;
 
+let lastFocusedElement = null;
+
 const dialogRef = document.getElementById("myDialog");
 const contentRef = document.getElementById("my_content");
 const dialogImg = document.getElementById("DialogImgID");
@@ -36,12 +38,20 @@ function openDialog() {
 function closeDialog() {
   dialogRef.close();
   dialogRef.classList.remove("opened");
+
+  if (lastFocusedElement) {
+    lastFocusedElement.focus(); // Return focus to the last focused element
+  }
 }
 
 function openImage(index) {
+  lastFocusedElement = document.activeElement; // Save the last focused element
+
   currentIndex = index; //  Take clicked img in the current Index
   updateDialogImage(); //  Update the Picture
   openDialog(); //      Open the Dialog
+
+  trapFocusInDialog(); //  Trap the Focus in the Dialog
 }
 
 // Includes the Array List  in the Elements
@@ -158,5 +168,42 @@ document.addEventListener("keydown", (event) => {
     closeDialog();
   }
 });
+
+function trapFocusInDialog() {
+  const focusableSelector = `
+    button,
+    [href],
+    input,
+    select,
+    textarea,
+    [tabindex]:not([tabindex="-1"])
+  `;
+
+  const focusableElements = dialogRef.querySelectorAll(focusableSelector);
+  if (focusableElements.length === 0) return;
+
+  const firstFocusableElement = focusableElements[0];
+  const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+  firstFocusableElement.focus();
+
+  dialogRef.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+
+    if (event.shiftKey) {
+      // Shift + Tab
+      if (document.activeElement === firstFocusableElement) {
+        event.preventDefault();
+        lastFocusableElement.focus();
+      }
+    } else {
+      // Tab
+      if (document.activeElement === lastFocusableElement) {
+        event.preventDefault();
+        firstFocusableElement.focus();
+      }
+    }
+  });
+}
 
 document.addEventListener("DOMContentLoaded", initArrays);
