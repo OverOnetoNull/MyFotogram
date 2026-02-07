@@ -136,7 +136,7 @@ p {
   margin: 5px;
   align-content: flex-start;
   justify-content: center;
-  max-width: 1920px;
+  max-width: 1440px;
 
 
 }
@@ -242,7 +242,7 @@ Dialog open close     */
 
   display: flex;
   width: 100vw;
-  max-width: 1920px;
+  max-width: 1440px;
 
 
 
