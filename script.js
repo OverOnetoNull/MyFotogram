@@ -18,23 +18,24 @@ let pictures = [
   "watch_Sun_GoBy",
 ];
 
+// Global setting for Index
+
+let currentIndex = 0;
+
 const dialogRef = document.getElementById("myDialog");
-const TabLeft = document.getElementById("tabLeft");
+const contentRef = document.getElementById("my_content");
+const dialogImg = document.getElementById("DialogImgID");
 
 // Open the Dialog
 function openDialog() {
   dialogRef.showModal();
   dialogRef.classList.add("opened");
-
-  document.getElementById("tabLeft").setAttribute("tabindex", "0");
 }
 
 // Close the Dialog
 function closeDialog() {
   dialogRef.close();
   dialogRef.classList.remove("opened");
-
-  document.getElementById("tabLeft").setAttribute("tabindex", "-1");
 }
 
 function openImage(index) {
@@ -69,7 +70,8 @@ function initArrays() {
       
         class="gallery-img"
          src="./img/pictures/${pictures[indexPictures]}.jpg"
-        
+        tabindex="0"
+        data-index="${indexPictures}"
         
      >
    
@@ -77,10 +79,6 @@ function initArrays() {
     `;
   }
 }
-
-// Global setting for Index
-
-let currentIndex = 0;
 
 //create Dialog IMG s with  Array-Index
 
@@ -127,45 +125,38 @@ function updateDialogImage() {
   dialogImg.alt = pictures[currentIndex];
 }
 
-// solution set enter to click Buttons
+// solution set keybord to click Buttons
+
 // for WCAG Konformity
 
-// SetEnterForClick
+// Set Enter ForClick
 
-// document.addEventListener("keydown", (event) => {
-//   if (event.key === "Enter") {
-//     const active = document.activeElement;
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter") return;
 
-//     if (active && active.hasAttribute("tabindex")) {
-//       active.click();
-//     }
-//   }
-// });
+  const active = document.activeElement;
 
-// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
+  if (!active || !active.classList.contains("gallery-img")) return;
 
-// window.addEventListener("keydown", (event) => {
-//   if (event.defaultPrevented) {
-//     return; // Do nothing if the event was already processed
-//   }
+  event.preventDefault();
 
-//   switch (event.key) {
-//     case "ArrowLeft":
-//       // Vorheriges Bild anzeigen
-//       prevImage();
-//       break;
-//     case "ArrowRight":
-//       // Nächstes Bild anzeigen
-//       nextImage();
-//       break;
-//     case "Enter":
-//       // Dialog schließen (für Barrierefreiheit)
-//       return;
-//       break;
-//     default:
-//       return; // Quit when this doesn't handle the key event.
-//   }
+  const index = Number(active.dataset.index);
 
-//   // Cancel the default action to avoid it being handled twice
-//   event.preventDefault();
-// });
+  if (Number.isNaN(index)) {
+    active.click();
+    return;
+  }
+  openImage(index);
+});
+
+// Set Escape For Click
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  if (dialogRef && dialogRef.open) {
+    closeDialog();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", initArrays);
