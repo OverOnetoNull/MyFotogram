@@ -33,6 +33,15 @@
 }
 
 
+.h2 {
+
+  color: rgb(189, 28, 28);
+  font-size: 32px;
+  border: 16px;
+  border-color: rgb(220, 175, 175);
+}
+
+
 
 p {
 
@@ -273,12 +282,26 @@ Dialog open close     */
 
 .dialogImageTitleCL {
 
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  display: flex;
+  background-color: rgba(255, 0, 0, 0.58);
+  justify-content: center;
+  border-radius: 12px;
+
+
 }
 
 
+.myCloseAndPicName {
 
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: baseline;
+
+
+}
 
 /* Buttons */
 
@@ -288,7 +311,6 @@ Dialog open close     */
   display: flex;
   width: 20px;
   align-items: center;
-
   justify-content: center;
 
 }
@@ -299,7 +321,6 @@ Dialog open close     */
   display: flex;
   width: 20px;
   align-items: center;
-
   justify-content: center;
 
 }
@@ -358,6 +379,10 @@ Dialog open close     */
 
   .h1 {
     font-size: 12px
+  }
+
+  .h2 {
+    font-size: 22px
   }
 
   .DialogImgClass {
