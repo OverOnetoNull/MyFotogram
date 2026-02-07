@@ -4,10 +4,7 @@
 
   --HeaderFooterBG: rgb(3, 14, 77);
   --HFerHeigh: 55px;
-  --colorArrows: red;
-  --colorArrBordercolor: rgba(193, 44, 238, 0.39);
-  --colorArrBackgroundcolor: rgb(13, 7, 193);
-  --consoleColorH1element: red;
+
   --consoleWidthH1element: 23px;
   --consoleHeightH1element: 23px;
 
@@ -38,18 +35,15 @@
 
 
 p {
-  color: var(--consoleColorH1element);
+
   width: var(--consoleWidthH1element);
   height: var(--consoleHeightH1element);
 
-  border: solid 10px;
-
-  border-color: var(--colorArrBordercolor);
-  background-color: var(--colorArrBackgroundcolor);
 
 
 
-  border-radius: 50%;
+
+
   /* border-width: 30px; */
 
 
@@ -218,13 +212,11 @@ p {
 
 }
 
-
-
-
-
 /* 
 
 Dialog open close     */
+
+
 
 
 
@@ -279,11 +271,20 @@ Dialog open close     */
 
 }
 
+.dialogImageTitleCL {
+
+  width: 200px;
+  height: 50px;
+}
+
+
+
+
 /* Buttons */
 
 .myLeftButton {
 
-  color: var(--colorArrows);
+
   display: flex;
   width: 20px;
   align-items: center;
@@ -294,7 +295,7 @@ Dialog open close     */
 
 .myRightButton {
 
-  color: var(--colorArrows);
+
   display: flex;
   width: 20px;
   align-items: center;

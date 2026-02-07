@@ -92,11 +92,8 @@ function initArrays() {
 
 //create Dialog IMG s with  Array-Index
 
-function showImageFromArray(index) {
-  currentIndex = index;
-  const dialogImg = document.getElementById("DialogImgID");
-  dialogImg.src = `./img/pictures/${pictures[currentIndex]}.jpg`;
-  dialogImg.alt = pictures[currentIndex];
+function containsElement(array, element) {
+  return array.includes(element);
 }
 
 // The right Mect Button change the index 1+
@@ -131,8 +128,14 @@ function prevImage() {
 
 function updateDialogImage() {
   const dialogImg = document.getElementById("DialogImgID");
-  dialogImg.src = `./img/pictures/${pictures[currentIndex]}.jpg`;
-  dialogImg.alt = pictures[currentIndex];
+  const titleEl = document.getElementById("dialogImageTitle");
+
+  const imageName = pictures[currentIndex];
+
+  dialogImg.src = `./img/pictures/${imageName}.jpg`;
+  dialogImg.alt = imageName;
+
+  titleEl.textContent = imageName.replaceAll("_", " ");
 }
 
 // solution set keybord to click Buttons
